@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2016 Tino Reichardt
+ * Copyright (c) 2017 Tino Reichardt
  * All rights reserved.
  *
  * You can contact the author at:
@@ -40,7 +40,7 @@ extern "C" {
 #  define WIN32_LEAN_AND_MEAN
 #endif
 
-#undef ERROR   /* reported already defined on VS 2015 (Rich Geldreich) */
+#undef ERROR   /* reported already defined on VS 2016 (Rich Geldreich) */
 #include <windows.h>
 #undef ERROR
 #define ERROR(name) ZSTD_ERROR(name)

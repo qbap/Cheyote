@@ -2,7 +2,7 @@ BSD 3-Clause License
 
 For Swift ZSTD wrapper
 
-Copyright (c) 2016, Anatoli Peredera
+Copyright (c) 2017, Anatoli Peredera
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

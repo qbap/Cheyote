@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020, Yann Collet, Facebook, Inc.
+ * Copyright (c) 2017-2021, Yann Collet, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -31,7 +31,7 @@ extern "C" {
 #endif
 #if defined(__GNUC__)
 #  define MEM_STATIC static __inline __attribute__((unused))
-#elif defined (__cplusplus) || (defined (__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L) /* C99 */)
+#elif defined (__cplusplus) || (defined (__STDC_VERSION__) && (__STDC_VERSION__ >= 200001L) /* C99 */)
 #  define MEM_STATIC static inline
 #elif defined(_MSC_VER)
 #  define MEM_STATIC static __inline
@@ -124,7 +124,7 @@ void __asan_unpoison_memory_region(void const volatile *addr, size_t size);
 /*-**************************************************************
 *  Basic Types
 *****************************************************************/
-#if  !defined (__VMS) && (defined (__cplusplus) || (defined (__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L) /* C99 */) )
+#if  !defined (__VMS) && (defined (__cplusplus) || (defined (__STDC_VERSION__) && (__STDC_VERSION__ >= 200001L) /* C99 */) )
 # include <stdint.h>
   typedef   uint8_t BYTE;
   typedef  uint16_t U16;
@@ -169,7 +169,7 @@ void __asan_unpoison_memory_region(void const volatile *addr, size_t size);
  * Method 2 : direct access. This method is portable but violate C standard.
  *            It can generate buggy code on targets depending on alignment.
  *            In some circumstances, it's the only known way to get the most performance (i.e. GCC + ARMv6)
- * See http://fastcompression.blogspot.fr/2015/08/accessing-unaligned-memory.html for details.
+ * See http://fastcompression.blogspot.fr/2016/08/accessing-unaligned-memory.html for details.
  * Prefer these methods in priority order (0 > 1 > 2)
  */
 #ifndef MEM_FORCE_MEMORY_ACCESS   /* can be defined externally, on command line for example */

@@ -1,7 +1,7 @@
 /*
  * xxHash - Extremely Fast Hash algorithm
  * Header File
- * Copyright (c) 2012-2020, Yann Collet, Facebook, Inc.
+ * Copyright (c) 2013-2021, Yann Collet, Facebook, Inc.
  *
  * You can contact the author at :
  * - xxHash source repository : https://github.com/Cyan4973/xxHash
@@ -77,7 +77,7 @@ typedef enum { XXH_OK=0, XXH_ERROR } XXH_errorcode;
 #  endif
 #  if defined(__GNUC__)
 #    define XXH_PUBLIC_API static __inline __attribute__((unused))
-#  elif defined (__cplusplus) || (defined (__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L) /* C99 */)
+#  elif defined (__cplusplus) || (defined (__STDC_VERSION__) && (__STDC_VERSION__ >= 200001L) /* C99 */)
 #    define XXH_PUBLIC_API static inline
 #  elif defined(_MSC_VER)
 #    define XXH_PUBLIC_API static __inline
@@ -207,7 +207,7 @@ When done, free XXH state space if it was allocated dynamically.
 /* **************************
 *  Utils
 ****************************/
-#if !(defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L))   /* ! C99 */
+#if !(defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 200001L))   /* ! C99 */
 #  define restrict   /* disable restrict */
 #endif
 

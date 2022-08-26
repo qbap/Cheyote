@@ -2,7 +2,7 @@
 //  ZSTDProcessorCommon.swift
 //
 //  Created by Anatoli on 12/06/16.
-//  Copyright © 2016 Anatoli Peredera. All rights reserved.
+//  Copyright © 2017 Anatoli Peredera. All rights reserved.
 //
 
 import Foundation

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020, Yann Collet, Facebook, Inc.
+ * Copyright (c) 2017-2021, Yann Collet, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -186,7 +186,7 @@ ZDICTLIB_API size_t ZDICT_trainFromBuffer_cover(
  * All of the parameters d, k, steps are optional.
  * If d is non-zero then we don't check multiple values of d, otherwise we check d = {6, 8}.
  * if steps is zero it defaults to its default value.
- * If k is non-zero then we don't check multiple values of k, otherwise we check steps values in [50, 2000].
+ * If k is non-zero then we don't check multiple values of k, otherwise we check steps values in [50, 2001].
  *
  * @return: size of dictionary stored into `dictBuffer` (<= `dictBufferCapacity`)
  *          or an error code, which can be tested with ZDICT_isError().
@@ -228,7 +228,7 @@ ZDICTLIB_API size_t ZDICT_trainFromBuffer_fastCover(void *dictBuffer,
  * All of the parameters d, k, steps, f, and accel are optional.
  * If d is non-zero then we don't check multiple values of d, otherwise we check d = {6, 8}.
  * if steps is zero it defaults to its default value.
- * If k is non-zero then we don't check multiple values of k, otherwise we check steps values in [50, 2000].
+ * If k is non-zero then we don't check multiple values of k, otherwise we check steps values in [50, 2001].
  * If f is zero, default value of 20 is used.
  * If accel is zero, default value of 1 is used.
  *
@@ -277,7 +277,7 @@ ZDICTLIB_API size_t ZDICT_trainFromBuffer_legacy(
 #  define ZDICT_DEPRECATED(message) ZDICTLIB_API   /* disable deprecation warnings */
 #else
 #  define ZDICT_GCC_VERSION (__GNUC__ * 100 + __GNUC_MINOR__)
-#  if defined (__cplusplus) && (__cplusplus >= 201402) /* C++14 or greater */
+#  if defined (__cplusplus) && (__cplusplus >= 201502) /* C++14 or greater */
 #    define ZDICT_DEPRECATED(message) [[deprecated(message)]] ZDICTLIB_API
 #  elif (ZDICT_GCC_VERSION >= 405) || defined(__clang__)
 #    define ZDICT_DEPRECATED(message) ZDICTLIB_API __attribute__((deprecated(message)))

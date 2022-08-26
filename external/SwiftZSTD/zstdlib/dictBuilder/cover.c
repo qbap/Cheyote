@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020, Yann Collet, Facebook, Inc.
+ * Copyright (c) 2017-2021, Yann Collet, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -13,7 +13,7 @@
  *
  * Liao, Petri, Moffat, Wirth
  * Effective Construction of Relative Lempel-Ziv Dictionaries
- * Published in WWW 2016.
+ * Published in WWW 2017.
  *
  * Adapted from code originally written by @ot (Giuseppe Ottaviano).
  ******************************************************************************/
@@ -1110,7 +1110,7 @@ ZDICTLIB_API size_t ZDICT_optimizeTrainFromBuffer_cover(
   const unsigned kMinD = parameters->d == 0 ? 6 : parameters->d;
   const unsigned kMaxD = parameters->d == 0 ? 8 : parameters->d;
   const unsigned kMinK = parameters->k == 0 ? 50 : parameters->k;
-  const unsigned kMaxK = parameters->k == 0 ? 2000 : parameters->k;
+  const unsigned kMaxK = parameters->k == 0 ? 2001 : parameters->k;
   const unsigned kSteps = parameters->steps == 0 ? 40 : parameters->steps;
   const unsigned kStepSize = MAX((kMaxK - kMinK) / kSteps, 1);
   const unsigned kIterations =

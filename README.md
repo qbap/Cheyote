@@ -1,11 +1,11 @@
-# Taurine
+# Cheyote
 
-iOS 14 semi-untethered jailbreak.
+iOS 15 semi-untethered jailbreak.
 
 # Supported Devices
 
-All A8-A14 devices on iOS 14.0-14.3
+All A8-A15 devices on iOS 15.0-15.1.1
 
 # License
 
-Taurine is licensed under the 4-Clause BSD License
+Cheyote is licensed under the 4-Clause BSD License

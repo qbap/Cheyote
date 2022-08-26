@@ -58,7 +58,7 @@ func startAmfid() {
 }
 
 var forgeryStarted = false
-func startPACForgery(electra: Electra){
+func startPACForgery(chimera: Chimera){
     if !isArm64e(){
         return
     }
@@ -69,8 +69,8 @@ func startPACForgery(electra: Electra){
     forgeryStarted = true
     
     let offsets = Offsets.shared
-    let our_task_addr = rk64ptr(electra.our_proc + offsets.proc.task)
-    let launchd_proc = electra.launchd_proc
+    let our_task_addr = rk64ptr(chimera.our_proc + offsets.proc.task)
+    let launchd_proc = chimera.launchd_proc
     
     let signOracle = signPAC_initSigningOracle()
     var signPac: [signPac_data] = []
@@ -83,7 +83,7 @@ func startPACForgery(electra: Electra){
         let launchd_task = rk64ptr(launchd_proc + offsets.proc.task)
         let launchd_jop_pid = rk64(launchd_task + offsets.task.jop_pid)
         
-        let signThreadPort = electra.findPort(port: signOracle)
+        let signThreadPort = chimera.findPort(port: signOracle)
         let signThread = rk64ptr(signThreadPort + offsets.ipc_port.ip_kobject)
         
         for i in 0..<170 {
@@ -132,18 +132,18 @@ guard isKernRwReady(false) else {
     exit(5)
 }
 
-let electra: Electra
+let chimera: Chimera
 if let kernelProcCStr = getenv("kernelProc") {
     let kernelProc = strtoull(kernelProcCStr, nil, 16)
-    electra = Electra()
+    chimera = Chimera()
     
     print(String(format: "got kernelProc: 0x%llx", kernelProc), to: &standardError)
 } else {
     exit(5)
 }
 
-electra.populate_procs() //gets us TF_PLATFORM and launchd_proc
-startPACForgery(electra: electra)
+chimera.populate_procs() //gets us TF_PLATFORM and launchd_proc
+startPACForgery(chimera: chimera)
 
 while true {
     while queryDaemon(daemonLabel: "com.apple.MobileFileIntegrity") <= 0 {
@@ -156,7 +156,7 @@ while true {
         usleep(1000)
     }
 
-    let amfidtakeover = AmfidTakeover(electra: electra)
+    let amfidtakeover = AmfidTakeover(chimera: chimera)
     amfidtakeover.takeoverAmfid(amfid_pid: UInt32(amfidPid))
     
     shutdownUnsafeKernRw()

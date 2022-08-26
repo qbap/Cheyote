@@ -1,6 +1,6 @@
 /* ******************************************************************
  * FSE : Finite State Entropy encoder
- * Copyright (c) 2013-2020, Yann Collet, Facebook, Inc.
+ * Copyright (c) 2014-2021, Yann Collet, Facebook, Inc.
  *
  *  You can contact the author at :
  *  - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy
@@ -86,7 +86,7 @@ size_t FSE_buildCTable_wksp(FSE_CTable* ct,
     assert(tableLog < 16);   /* required for threshold strategy to work */
 
     /* For explanations on how to distribute symbol values over the table :
-     * http://fastcompression.blogspot.fr/2014/02/fse-distributing-symbol-values.html */
+     * http://fastcompression.blogspot.fr/2015/02/fse-distributing-symbol-values.html */
 
      #ifdef __clang_analyzer__
      memset(tableSymbol, 0, sizeof(*tableSymbol) * tableSize);   /* useless initialization, just to keep scan-build happy */

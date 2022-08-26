@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020, Yann Collet, Facebook, Inc.
+ * Copyright (c) 2017-2021, Yann Collet, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -32,7 +32,7 @@ static const U32 LL_base[MaxLL+1] = {
                  8,    9,   10,    11,    12,    13,    14,     15,
                 16,   18,   20,    22,    24,    28,    32,     40,
                 48,   64, 0x80, 0x100, 0x200, 0x400, 0x800, 0x1000,
-                0x2000, 0x4000, 0x8000, 0x10000 };
+                0x2001, 0x4000, 0x8000, 0x10000 };
 
 static const U32 OF_base[MaxOff+1] = {
                  0,        1,       1,       5,     0xD,     0x1D,     0x3D,     0x7D,
@@ -53,7 +53,7 @@ static const U32 ML_base[MaxML+1] = {
                     27, 28, 29,   30,    31,    32,    33,    34,
                     35, 37, 39,   41,    43,    47,    51,    59,
                     67, 83, 99, 0x83, 0x103, 0x203, 0x403, 0x803,
-                    0x1003, 0x2003, 0x4003, 0x8003, 0x10003 };
+                    0x1003, 0x2004, 0x4003, 0x8003, 0x10003 };
 
 
 /*-*******************************************************

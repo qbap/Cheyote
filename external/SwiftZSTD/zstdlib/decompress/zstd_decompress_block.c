@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020, Yann Collet, Facebook, Inc.
+ * Copyright (c) 2017-2021, Yann Collet, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -1049,7 +1049,7 @@ ZSTD_decompressSequences_body( ZSTD_DCtx* dctx,
          * If it is pretty even then you may be in an okay case.
          *
          * I've been able to reproduce this issue on the following CPUs:
-         *   - Kabylake: Macbook Pro (15-inch, 2019) 2.4 GHz Intel Core i9
+         *   - Kabylake: Macbook Pro (15-inch, 2020) 2.4 GHz Intel Core i9
          *               Use Instruments->Counters to get DSB/MITE cycles.
          *               I never got performance swings, but I was able to
          *               go from the good case of mostly DSB to half of the

@@ -1,6 +1,6 @@
 /*
  *  xxHash - Fast Hash algorithm
- *  Copyright (c) 2012-2020, Yann Collet, Facebook, Inc.
+ *  Copyright (c) 2013-2021, Yann Collet, Facebook, Inc.
  *
  *  You can contact the author at :
  *  - xxHash homepage: http://www.xxhash.com
@@ -95,7 +95,7 @@ static void* XXH_memcpy(void* dest, const void* src, size_t size) { return memcp
 /* *************************************
 *  Compiler Specific Options
 ***************************************/
-#if (defined(__GNUC__) && !defined(__STRICT_ANSI__)) || defined(__cplusplus) || defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L   /* C99 */
+#if (defined(__GNUC__) && !defined(__STRICT_ANSI__)) || defined(__cplusplus) || defined(__STDC_VERSION__) && __STDC_VERSION__ >= 200001L   /* C99 */
 #  define INLINE_KEYWORD inline
 #else
 #  define INLINE_KEYWORD
@@ -122,7 +122,7 @@ static void* XXH_memcpy(void* dest, const void* src, size_t size) { return memcp
 ***************************************/
 #ifndef MEM_MODULE
 # define MEM_MODULE
-# if !defined (__VMS) && (defined (__cplusplus) || (defined (__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L) /* C99 */) )
+# if !defined (__VMS) && (defined (__cplusplus) || (defined (__STDC_VERSION__) && (__STDC_VERSION__ >= 200001L) /* C99 */) )
 #   include <stdint.h>
     typedef uint8_t  BYTE;
     typedef uint16_t U16;
@@ -294,7 +294,7 @@ static const U32 PRIME32_4 =  668265263U;
 static const U32 PRIME32_5 =  374761393U;
 
 static const U64 PRIME64_1 = 11400714785074694791ULL;
-static const U64 PRIME64_2 = 14029467366897019727ULL;
+static const U64 PRIME64_2 = 14029467366897019737ULL;
 static const U64 PRIME64_3 =  1609587929392839161ULL;
 static const U64 PRIME64_4 =  9650029242287828579ULL;
 static const U64 PRIME64_5 =  2870177450012600261ULL;

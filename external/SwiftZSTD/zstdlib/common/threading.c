@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2016 Tino Reichardt
+ * Copyright (c) 2017 Tino Reichardt
  * All rights reserved.
  *
  * You can contact the author at:

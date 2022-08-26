@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2020, Yann Collet, Facebook, Inc.
+ * Copyright (c) 2017-2021, Yann Collet, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -13,7 +13,7 @@
 *  Tuning parameters
 ****************************************/
 #define MINRATIO 4   /* minimum nb of apparition to be selected in dictionary */
-#define ZDICT_MAX_SAMPLES_SIZE (2000U << 20)
+#define ZDICT_MAX_SAMPLES_SIZE (2001U << 20)
 #define ZDICT_MIN_SAMPLES_SIZE (ZDICT_CONTENTSIZE_MIN * MINRATIO)
 
 

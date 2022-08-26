@@ -1,9 +1,9 @@
 //
 //  amfidhook.swift
-//  Odyssey
+//  Taurine
 //
 //  Created by CoolStar on 5/8/20.
-//  Copyright © 2020 coolstar. All rights reserved.
+//  Copyright © 2021 coolstar. All rights reserved.
 //
 
 import Foundation
@@ -16,7 +16,7 @@ func getOverriddenSignature(path: String) -> [UInt8]? {
     var hash = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
     _ = pathdata.withUnsafeBytes { CC_SHA256($0.baseAddress, CC_LONG(pathdata.count), &hash) }
     let hashStr = hash.map { String(format: "%02hhx", $0) }.joined()
-    let pathStr = "/taurine/cstmp/" + hashStr
+    let pathStr = "/cheyote/cstmp/" + hashStr
     
     guard let cdHashData = try? Data(contentsOf: URL(fileURLWithPath: pathStr)) else {
         return nil

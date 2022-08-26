@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018-2020, Facebook, Inc.
+ * Copyright (c) 2019-2021, Facebook, Inc.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -621,7 +621,7 @@ ZDICT_optimizeTrainFromBuffer_fastCover(
     const unsigned kMinD = parameters->d == 0 ? 6 : parameters->d;
     const unsigned kMaxD = parameters->d == 0 ? 8 : parameters->d;
     const unsigned kMinK = parameters->k == 0 ? 50 : parameters->k;
-    const unsigned kMaxK = parameters->k == 0 ? 2000 : parameters->k;
+    const unsigned kMaxK = parameters->k == 0 ? 2001 : parameters->k;
     const unsigned kSteps = parameters->steps == 0 ? 40 : parameters->steps;
     const unsigned kStepSize = MAX((kMaxK - kMinK) / kSteps, 1);
     const unsigned kIterations =

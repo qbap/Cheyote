@@ -1,9 +1,9 @@
 TARGETNAME = amfidebilitate
 OUTDIR ?= bin
 
-SWIFTC = xcrun -sdk iphoneos swiftc -target $(ARCH)-apple-ios14.0
-CC = xcrun -sdk iphoneos clang -arch $(ARCH) -target $(ARCH)-apple-ios14.0
-CXX = xcrun -sdk iphoneos clang -arch $(ARCH) -target $(ARCH)-apple-ios14.0 -std=c++11
+SWIFTC = xcrun -sdk iphoneos swiftc -target $(ARCH)-apple-ios15.0
+CC = xcrun -sdk iphoneos clang -arch $(ARCH) -target $(ARCH)-apple-ios15.0
+CXX = xcrun -sdk iphoneos clang -arch $(ARCH) -target $(ARCH)-apple-ios15.0 -std=c++11
 ifneq (,$(wildcard /opt/procursus/bin/ldid))
 LDID = /opt/procursus/bin/ldid
 else
@@ -15,7 +15,7 @@ endif
 all: fat
 
 SWIFTFLAGS = -Xcc "-Iinclude" -Xcc -DENABLE_XPC
-CFLAGS = -Iinclude -DENABLE_XPC -miphoneos-version-min=14.0
+CFLAGS = -Iinclude -DENABLE_XPC -miphoneos-version-min=15.0
 
 DEBUG ?= 0
 SERIAL = 0
@@ -40,7 +40,7 @@ $(OUTDIR):
 %-$(ARCH).co: %.cpp
 	$(CXX) -c -o $@ $< $(CFLAGS)
 
-$(OUTDIR)/$(TARGETNAME)-$(ARCH): main.swift machoparse.swift amfidtakeover.swift amfidhook.swift offsets.swift electra.swift swiftUtil.swift cutils-$(ARCH).o kernrw_daemonUser-$(ARCH).o signPAC-$(ARCH).o $(LOG_FILES) KernelRW-$(ARCH).co KernelRwWrapper-$(ARCH).co libgeneral_exception-$(ARCH).co | $(OUTDIR)
+$(OUTDIR)/$(TARGETNAME)-$(ARCH): main.swift machoparse.swift amfidtakeover.swift amfidhook.swift offsets.swift chimera.swift swiftUtil.swift cutils-$(ARCH).o kernrw_daemonUser-$(ARCH).o signPAC-$(ARCH).o $(LOG_FILES) KernelRW-$(ARCH).co KernelRwWrapper-$(ARCH).co libgeneral_exception-$(ARCH).co | $(OUTDIR)
 	$(SWIFTC) -o $@ $^ -import-objc-header amfidebilitate-Bridging-Header.h $(SWIFTFLAGS) -framework IOKit -lc++
 	strip $@
 	$(LDID) -Ksigncert.p12 -Sent.plist $@

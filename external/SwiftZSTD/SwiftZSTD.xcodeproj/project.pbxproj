@@ -150,8 +150,8 @@
 		B6FD03581F6D1E49000202D8 /* StreamHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B6FD03561F6D1E49000202D8 /* StreamHelpers.m */; };
 		B6FD035C1F6D20CF000202D8 /* StreamHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B6FD03591F6D1F75000202D8 /* StreamHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6FD035D1F6D20D6000202D8 /* StreamHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = B6FD03591F6D1F75000202D8 /* StreamHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6FD03651F70A9F2000202D8 /* zstdmt_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = B6FD03641F70A9F2000202D8 /* zstdmt_compress.c */; };
-		B6FD03661F70A9F2000202D8 /* zstdmt_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = B6FD03641F70A9F2000202D8 /* zstdmt_compress.c */; };
+		B6FD03651F70A9F2001202D8 /* zstdmt_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = B6FD03641F70A9F2001202D8 /* zstdmt_compress.c */; };
+		B6FD03661F70A9F2001202D8 /* zstdmt_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = B6FD03641F70A9F2001202D8 /* zstdmt_compress.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,7 +169,7 @@
 			remoteGlobalIDString = B60EDDB41E0A2CF100F2713B;
 			remoteInfo = SwiftZSTD_iOS;
 		};
-		B6C02D6023D687520001675F /* PBXContainerItemProxy */ = {
+		B6C02D6023D687520011675F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B60EDD9C1E0A2AD000F2713B /* Project object */;
 			proxyType = 1;
@@ -275,8 +275,8 @@
 		B6C02D4923D683C40001675F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6C02D4E23D683D40001675F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6C02D5323D683D40001675F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6C02D5B23D687520001675F /* iOSTestApp-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOSTestApp-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6C02D5F23D687520001675F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6C02D5B23D687520011675F /* iOSTestApp-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOSTestApp-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6C02D5F23D687520011675F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6E8FDF21F4FC47D007875AC /* compiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compiler.h; sourceTree = "<group>"; };
 		B6E8FDF61F4FC4B5007875AC /* pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pool.h; sourceTree = "<group>"; };
 		B6E8FDFA1F4FC4E4007875AC /* pool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pool.c; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 		B6FD03531F6B6F05000202D8 /* ZSTDStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZSTDStream.swift; path = Sources/ZSTDStream.swift; sourceTree = "<group>"; };
 		B6FD03561F6D1E49000202D8 /* StreamHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreamHelpers.m; path = Sources/StreamHelpers.m; sourceTree = "<group>"; };
 		B6FD03591F6D1F75000202D8 /* StreamHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreamHelpers.h; path = Sources/StreamHelpers.h; sourceTree = "<group>"; };
-		B6FD03641F70A9F2000202D8 /* zstdmt_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zstdmt_compress.c; sourceTree = "<group>"; };
+		B6FD03641F70A9F2001202D8 /* zstdmt_compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zstdmt_compress.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6C02D5823D687520001675F /* Frameworks */ = {
+		B6C02D5823D687520011675F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,7 +348,7 @@
 				B6A3756923CEA74B006C8ED4 /* SwiftZSTDTests_macOS */,
 				B6A3758723CEACDE006C8ED4 /* SwiftZSTDTests_iOS */,
 				B6C02D4623D683C40001675F /* iOSTestApp */,
-				B6C02D5C23D687520001675F /* iOSTestApp-Tests */,
+				B6C02D5C23D687520011675F /* iOSTestApp-Tests */,
 				B60EDDA81E0A2C2400F2713B /* Products */,
 				B618446A1E0ED5D6002381B9 /* Frameworks */,
 			);
@@ -362,7 +362,7 @@
 				B6A3756823CEA74B006C8ED4 /* SwiftZSTDTests_macOS.xctest */,
 				B6A3758623CEACDD006C8ED4 /* SwiftZSTDTests_iOS.xctest */,
 				B6C02D4523D683C40001675F /* iOSTestApp.app */,
-				B6C02D5B23D687520001675F /* iOSTestApp-Tests.xctest */,
+				B6C02D5B23D687520011675F /* iOSTestApp-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -464,7 +464,7 @@
 				B68A38AE23B1C42D0097BCB7 /* zstd_opt.c */,
 				B68A38AC23B1C42D0097BCB7 /* zstd_opt.h */,
 				B68A38AD23B1C42D0097BCB7 /* zstdmt_compress.h */,
-				B6FD03641F70A9F2000202D8 /* zstdmt_compress.c */,
+				B6FD03641F70A9F2001202D8 /* zstdmt_compress.c */,
 				B60EDE1D1E0A30B000F2713B /* fse_compress.c */,
 				B60EDE1E1E0A30B000F2713B /* huf_compress.c */,
 				B60EDE201E0A30B000F2713B /* zstd_compress.c */,
@@ -545,10 +545,10 @@
 			path = iOSTestApp;
 			sourceTree = "<group>";
 		};
-		B6C02D5C23D687520001675F /* iOSTestApp-Tests */ = {
+		B6C02D5C23D687520011675F /* iOSTestApp-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B6C02D5F23D687520001675F /* Info.plist */,
+				B6C02D5F23D687520011675F /* Info.plist */,
 			);
 			path = "iOSTestApp-Tests";
 			sourceTree = "<group>";
@@ -729,22 +729,22 @@
 			productReference = B6C02D4523D683C40001675F /* iOSTestApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B6C02D5A23D687520001675F /* iOSTestApp-Tests */ = {
+		B6C02D5A23D687520011675F /* iOSTestApp-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6C02D6223D687520001675F /* Build configuration list for PBXNativeTarget "iOSTestApp-Tests" */;
+			buildConfigurationList = B6C02D6223D687520011675F /* Build configuration list for PBXNativeTarget "iOSTestApp-Tests" */;
 			buildPhases = (
-				B6C02D5723D687520001675F /* Sources */,
-				B6C02D5823D687520001675F /* Frameworks */,
-				B6C02D5923D687520001675F /* Resources */,
+				B6C02D5723D687520011675F /* Sources */,
+				B6C02D5823D687520011675F /* Frameworks */,
+				B6C02D5923D687520011675F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B6C02D6123D687520001675F /* PBXTargetDependency */,
+				B6C02D6123D687520011675F /* PBXTargetDependency */,
 			);
 			name = "iOSTestApp-Tests";
 			productName = "iOSTestApp-Tests";
-			productReference = B6C02D5B23D687520001675F /* iOSTestApp-Tests.xctest */;
+			productReference = B6C02D5B23D687520011675F /* iOSTestApp-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -782,7 +782,7 @@
 						DevelopmentTeam = M3M9FW7E9Y;
 						ProvisioningStyle = Automatic;
 					};
-					B6C02D5A23D687520001675F = {
+					B6C02D5A23D687520011675F = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = M3M9FW7E9Y;
 						ProvisioningStyle = Automatic;
@@ -808,7 +808,7 @@
 				B6A3756723CEA74B006C8ED4 /* SwiftZSTDTests_macOS */,
 				B6A3758523CEACDD006C8ED4 /* SwiftZSTDTests_iOS */,
 				B6C02D4423D683C40001675F /* iOSTestApp */,
-				B6C02D5A23D687520001675F /* iOSTestApp-Tests */,
+				B6C02D5A23D687520011675F /* iOSTestApp-Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -850,7 +850,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6C02D5923D687520001675F /* Resources */ = {
+		B6C02D5923D687520011675F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -885,7 +885,7 @@
 				B60EDE481E0A30B000F2713B /* fse_compress.c in Sources */,
 				B60EDE361E0A30B000F2713B /* fse_decompress.c in Sources */,
 				B60EDE421E0A30B000F2713B /* zstd_common.c in Sources */,
-				B6FD03651F70A9F2000202D8 /* zstdmt_compress.c in Sources */,
+				B6FD03651F70A9F2001202D8 /* zstdmt_compress.c in Sources */,
 				B60EDE4E1E0A30B000F2713B /* zstd_compress.c in Sources */,
 				B60EDE4A1E0A30B000F2713B /* huf_compress.c in Sources */,
 				B68A38B223B1C42E0097BCB7 /* zstd_compress_literals.c in Sources */,
@@ -927,7 +927,7 @@
 				B6E8FE061F4FCD6F007875AC /* pool.c in Sources */,
 				B60EDE491E0A30B000F2713B /* fse_compress.c in Sources */,
 				B60EDE371E0A30B000F2713B /* fse_decompress.c in Sources */,
-				B6FD03661F70A9F2000202D8 /* zstdmt_compress.c in Sources */,
+				B6FD03661F70A9F2001202D8 /* zstdmt_compress.c in Sources */,
 				B60EDE431E0A30B000F2713B /* zstd_common.c in Sources */,
 				B60EDE4F1E0A30B000F2713B /* zstd_compress.c in Sources */,
 				B68A38B323B1C42E0097BCB7 /* zstd_compress_literals.c in Sources */,
@@ -969,7 +969,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6C02D5723D687520001675F /* Sources */ = {
+		B6C02D5723D687520011675F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -990,10 +990,10 @@
 			target = B60EDDB41E0A2CF100F2713B /* SwiftZSTD_iOS */;
 			targetProxy = B6A3758C23CEACDE006C8ED4 /* PBXContainerItemProxy */;
 		};
-		B6C02D6123D687520001675F /* PBXTargetDependency */ = {
+		B6C02D6123D687520011675F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B6C02D4423D683C40001675F /* iOSTestApp */;
-			targetProxy = B6C02D6023D687520001675F /* PBXContainerItemProxy */;
+			targetProxy = B6C02D6023D687520011675F /* PBXContainerItemProxy */;
 		};
 		B6C02D6A23D688A60001675F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1596,7 +1596,7 @@
 			};
 			name = Release;
 		};
-		B6C02D6323D687520001675F /* Debug */ = {
+		B6C02D6323D687520011675F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1642,7 +1642,7 @@
 			};
 			name = Debug;
 		};
-		B6C02D6423D687520001675F /* Release */ = {
+		B6C02D6423D687520011675F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1740,11 +1740,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6C02D6223D687520001675F /* Build configuration list for PBXNativeTarget "iOSTestApp-Tests" */ = {
+		B6C02D6223D687520011675F /* Build configuration list for PBXNativeTarget "iOSTestApp-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6C02D6323D687520001675F /* Debug */,
-				B6C02D6423D687520001675F /* Release */,
+				B6C02D6323D687520011675F /* Debug */,
+				B6C02D6423D687520011675F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
